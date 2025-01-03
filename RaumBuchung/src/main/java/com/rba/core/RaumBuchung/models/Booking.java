@@ -18,16 +18,18 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long bookingId;
 
-   // @ManyToOne
-   // @JoinColumn(name = "user_id")
-   // private User bookingUser;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User bookingUser;
 
     /*
     Many to one here as well
      */
-   // private Room correspondingRoom;
+    @ManyToOne
+    @JoinColumn(name = "room_id")
+    private Room correspondingRoom;
 
-
+    private BookingType bookingType;
     private LocalTime startTime;
     private LocalTime endTime;
 
