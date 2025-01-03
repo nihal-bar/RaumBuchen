@@ -19,4 +19,5 @@ public class Room {
     private Long id;
     private int roomNumber;
     private int capacity;
+    //TODO Can add monitor types and other table settings?
 }

@@ -17,7 +17,6 @@ public class BookingService {
     public Booking createBooking(BookingDto dto) {
         BookingMapper mapper = new BookingMapper();
         Booking buchung = mapper.toBooking(dto);
-        //TODO Insert DTO layer
 
         return bookingRepo.save(buchung);
     }
